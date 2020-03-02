@@ -1,0 +1,28 @@
+.block_emergency_alerts.card {
+	border: 0 none;
+}
+.block_emergency_alerts.active {
+    width: 100%;
+    margin-bottom: 30px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.block_emergency_alerts .card-body {
+	padding: 0 !important;
+}
+.block_emergency_alerts .card-body .block-controls {
+	z-index: 999;
+    position: relative;
+}
+.block_emergency_alerts .card-title {
+    display: none;
+}
+.block_emergency_alerts.block_with_controls .card-title {
+    display: block;
+}
+.block_emergency_alerts .alert {
+	margin-bottom: 3px;
+    min-height: 70px;
+}
