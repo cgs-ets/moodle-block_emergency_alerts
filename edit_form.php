@@ -77,7 +77,8 @@ class block_emergency_alerts_edit_form extends block_edit_form {
             'trusttext'=> true,
             'subdirs' => 0
         );
-        $repeatarray[] = &$mform->createElement($type, $name, $label, null, $editoroptions);
+        $attributes = 'rows="4"';
+        $repeatarray[] = &$mform->createElement($type, $name, $label, $attributes, $editoroptions);
 
         $type = 'select';
         $name = 'config_alerttype';
@@ -100,7 +101,7 @@ class block_emergency_alerts_edit_form extends block_edit_form {
         $repeatarray[] = &$mform->createElement($type, $name, $label, $desc, $options, $values);
 
         $type = 'html';
-        $value = '<br/><br/>';
+        $value = '<br/><hr><br/>';
         $repeatarray[] = &$mform->createElement($type, $value); // Spacer.
 
         $repeatcount = DEFAULT_NUMBER_ALERTS;

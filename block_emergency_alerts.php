@@ -85,7 +85,6 @@ class block_emergency_alerts extends block_base {
     public function get_content() {
         global $OUTPUT;
 
-
         // If content has already been generated, don't waste time generating it again.
         if ($this->content !== null) {
             return $this->content;

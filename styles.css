@@ -25,4 +25,13 @@
 .block_emergency_alerts .alert {
 	margin-bottom: 3px;
     min-height: 70px;
+    padding: 30px;
+}
+.block_emergency_alerts .alert.alert-danger {
+    color: #fff;
+    background-color: #D32137;
+}
+.block_emergency_alerts .alert.alert-success {
+    color: #fff;
+    background-color: #64C94F;
 }
