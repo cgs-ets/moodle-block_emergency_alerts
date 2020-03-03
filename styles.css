@@ -35,3 +35,7 @@
     color: #fff;
     background-color: #64C94F;
 }
+.block_emergency_alerts .alert.alert-warning {
+    color: #000;
+    background-color: #FFCC00;
+}
