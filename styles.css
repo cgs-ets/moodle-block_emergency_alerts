@@ -25,7 +25,10 @@
 .block_emergency_alerts .alert {
 	margin-bottom: 3px;
     min-height: 70px;
-    padding: 30px;
+    padding: 25px;
+}
+.block_emergency_alerts .alert p:last-of-type {
+    margin: 0;
 }
 .block_emergency_alerts .alert.alert-danger {
     color: #fff;

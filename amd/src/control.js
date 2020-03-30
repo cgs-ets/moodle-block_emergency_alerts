@@ -63,6 +63,26 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
    EmergencyalertControl.prototype.main = function () {
         var self = this;
 
+        self.drawBanner();
+
+        var body = $('body');
+        
+        //Subscribe to nav drawer event
+        PubSub.subscribe('nav-drawer-toggle-end', function(el){
+            if (body.hasClass('has-emergency-alert')) {
+                window.scrollTo(0, 0);
+            }
+        });
+
+        // Watch resize to adjust width
+        $(window).on('resize', function(){
+            self.drawBanner();
+        });
+    };
+
+    EmergencyalertControl.prototype.drawBanner = function () {
+        var self = this;
+
         var body = $('body');
         var block = self.region.closest('.block.block_emergency_alerts');
 
@@ -85,14 +105,6 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
             navleft.css(css);
             navtop.css(css);
         }
-
-        //Subscribe to nav drawer event
-        PubSub.subscribe('nav-drawer-toggle-end', function(el){
-            if (body.hasClass('has-emergency-alert')) {
-                Log.debug('scrolling to top');
-                window.scrollTo(0, 0);
-            }
-        });
     };
 
     return {
