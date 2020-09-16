@@ -43,7 +43,7 @@ class block_emergency_alerts extends block_base {
      * Core function used to identify if the block has a config page.
      */
     public function has_config() {
-        return true;
+        return false;
     }
 
     /**
