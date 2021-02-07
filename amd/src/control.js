@@ -101,6 +101,7 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
             var css = {
                 'margin-top' : height,
                 'position' : 'absolute',
+                'height' : 'auto',
             };
             navleft.css(css);
             navtop.css(css);
