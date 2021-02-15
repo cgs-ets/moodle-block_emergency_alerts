@@ -92,19 +92,26 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
             block.detach();
             body.prepend(block);
 
-            var page = $('#page');
-            var navleft = $('#nav-drawer');
-            var navtop = $('.navbar'); 
-
             var height = block.height();
-            page.css('margin-top', height+navtop.height());
+
+            var navtop = $('.navbar'); 
+            var css = {
+                'margin-top' : height,
+                'position' : 'absolute',
+            };
+            navtop.css(css);
+
+            var navleft = $('#nav-drawer');
             var css = {
                 'margin-top' : height,
                 'position' : 'absolute',
                 'height' : 'auto',
+                'overflow' : 'hidden',
             };
             navleft.css(css);
-            navtop.css(css);
+
+            var page = $('#page');
+            page.css('margin-top', height+navtop.height());
             body.css('overflow-y', 'auto');
         }
     };
