@@ -105,6 +105,7 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
             };
             navleft.css(css);
             navtop.css(css);
+            body.css('overflow-y', 'auto');
         }
     };
 
