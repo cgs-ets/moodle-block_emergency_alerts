@@ -23,9 +23,11 @@
     display: block;
 }
 .block_emergency_alerts .alert {
-	margin-bottom: 3px;
+	  margin-bottom: 3px;
     min-height: 70px;
     padding: 25px;
+    border-radius: 0;
+    margin: 0;
 }
 .block_emergency_alerts .alert p:last-of-type {
     margin: 0;

@@ -111,8 +111,7 @@ define(['jquery', 'core/log', 'core/pubsub'], function($, Log, PubSub) {
             navleft.css(css);
             // Add scroll back into nav.
             navleft.css('height', 'calc(100% - ' + (height + 70) + 'px)');
-            //navleft.css('overflow-y', 'auto');
-            navleft.css('overflow', 'visible');
+            navleft.css('overflow-y', 'auto');
 
             var page = $('#page');
             page.css('margin-top', height+navtop.height());
